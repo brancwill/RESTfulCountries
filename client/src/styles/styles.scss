@@ -10,6 +10,9 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    a {
+        text-decoration: none;
+    }
     
 }
 .App {
@@ -36,19 +39,37 @@ body {
 
 h1 {
     font: 800 18px "Nunito Sans";
+    @include include-media.media('>=tablet', '<desktop') {
+        font-size: 22px;
+    }
 }
 h2 {
     font: 800 14px "Nunito Sans";
+    @include include-media.media('>=tablet', '<desktop') {
+        font-size: 18px;
+    }
 }
 h3 {
     font: 600 14px "Nunito Sans";
+    @include include-media.media('>=tablet', '<desktop') {
+        font-size: 18px;
+    }
 }
 h4 {
     font: 600 12px "Nunito Sans";
+    @include include-media.media('>=tablet', '<desktop') {
+        font-size: 16px;
+    }
 }
 h5 {
     font: 300 14px "Nunito Sans";
+    @include include-media.media('>=tablet', '<desktop') {
+        font-size: 18px;
+    }
 }
 p {
     font: 400 12px "Nunito Sans";
+    @include include-media.media('>=tablet', '<desktop') {
+        font-size: 14px;
+    }
 }

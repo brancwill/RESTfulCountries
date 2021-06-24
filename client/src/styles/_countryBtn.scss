@@ -11,16 +11,30 @@
     margin: auto;
     position: relative;
     z-index: 0;
+    @include include-media.media('>=desktop') {
+        height: 30vw;
+        max-width: 300px;
+        max-height: 300px;
+        width: 100%;
+    }
     img {
         overflow: hidden;
         border-radius: 5px 5px 0 0;
         height: 50%;
-        margin-top: -5vh;
+        width: 100%;
+        margin-top: -6vh;
         margin-bottom: 10px;
+        object-fit: cover;
     }
     .CountryInfo {
         @include variables.flex(column, space-around, flex-start);
         margin-left: -15vw;
+        @include include-media.media('>=tablet') {
+            margin-left: -5vw;
+        }
+        @include include-media.media('>=desktop') {
+            margin-left: -1vw;
+        }
         h1 {
             margin-bottom: 25px;
         }

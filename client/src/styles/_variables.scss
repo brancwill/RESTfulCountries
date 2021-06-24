@@ -1,13 +1,16 @@
 $light1: #FFFFFF;
 $light2: #FAFAFA;
+$light3: #ececec;
 $dark1: #2B3844;
 $dark2: #202C36;
+$dark3: #10161b;
 $black: #111517;
 
 @mixin theme($light:true) {
     @if $light {
         background-color: $light1;
         color: $black;
+        box-shadow: 0 1px 1px $light3;
         &::placeholder {
             color: #C2C2C2;
         }
@@ -20,6 +23,7 @@ $black: #111517;
     } @else {
         background-color: $dark1;
         color: white;
+        box-shadow: 0 1px 1px $dark3;
         &::placeholder {
             color: white;
         }

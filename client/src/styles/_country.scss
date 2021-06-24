@@ -3,19 +3,43 @@
 
 .Country {
     position: relative;
+    .Container2 {
+        margin-top: 100px;
+    }
+    .NoDisplayMobile {
+        display: none;
+        @include include-media.media('>=desktop') {
+            @include variables.flex(row, space-evenly, center);
+        }
+    }
+    .NoDisplayDesktop {
+        @include include-media.media('>=desktop') {
+            display: none;
+        }
+    }
     a {
         text-decoration: none;
     }
     .BackArrow {
         position: absolute;
-        top: 30px;
+        top: 28px;
         left: 13%;
+        @include include-media.media('>=tablet') {
+            top: 37px;
+        }
+        @include include-media.media('>=desktop') {
+            top: 30px;
+            left: 11%;
+        }
     }
     .BackButton {
         margin-left: 10%;
         text-align: right;
         padding-right: 4%;
         box-sizing: border-box;
+        @include include-media.media('>=desktop') {
+            width: 10%;
+        }
     }
     h5 {
         text-align: center;
@@ -28,14 +52,44 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        @include include-media.media('>=tablet') {
+            width: 20%;
+            height: 35px;
+        }
     }
     .Flag {
         margin: 20px auto;
         border-radius: 5px;
         @include variables.centerContent;
+        @include include-media.media('>=desktop') {
+            width: 40%;
+            margin-left: 3%;
+            margin-right: 3%;
+        }
     }
     .BorderCountries {
         padding-left: 10%;
+        @include include-media.media('>=desktop') {
+            @include variables.flex(row, space-evenly, center);
+            position: relative;
+            width: 50vw;
+            left: 19.5%;
+            top: -120px;
+           h5 {
+               width: 8vw;
+               height: 28px;
+           }
+           h2 {
+               font-weight: 600;
+               white-space: nowrap;
+               margin-right: 5px;
+           }
+           .Neighbors {
+               display: grid;
+               grid-template-columns: 1fr 1fr 1fr;
+               margin-top: 90px;
+           }
+        }
     }
     h1, h2 {
         margin-left: 10%;
@@ -43,6 +97,9 @@
     h1 {
         margin-top: 40px;
         margin-bottom: 30px;
+        @include include-media.media('>=desktop') {
+            font-size: 32px;
+        }
     }
     h2 {
         margin-bottom: 20px;
@@ -54,6 +111,8 @@
         margin-top: -20px;
         p {
             font-weight: 300;
+        }
+        @include include-media.media('>=desktop') {
         }
     }
     .CountryLink {

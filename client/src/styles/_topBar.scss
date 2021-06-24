@@ -8,9 +8,25 @@
     padding: 0 5%;
     box-sizing: border-box;
     margin: 0;
+    h3 {
+        @include include-media.media('>=desktop') {
+            font-size: 20px;
+        }
+    }
+    p {
+        @include include-media.media('>=desktop') {
+            font-size: 16px;
+        }
+    }
+    img {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 5px;
+    }
     .DarkModeButton {
         @include variables.flex(row, space-between, center);
         text-decoration: none;
         gap: 3px;
+        box-shadow: none;
     }
 }
