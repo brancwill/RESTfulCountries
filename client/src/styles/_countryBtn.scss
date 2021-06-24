@@ -8,7 +8,7 @@
     height: 80vw;
     max-height: 365px;
     border-radius: 5px;
-    margin: auto;
+    margin: 20px auto;
     position: relative;
     z-index: 0;
     @include include-media.media('>=desktop') {
@@ -16,6 +16,7 @@
         max-width: 300px;
         max-height: 300px;
         width: 100%;
+        margin-top: 0;
     }
     img {
         overflow: hidden;
@@ -39,7 +40,7 @@
         h1 {
             margin-bottom: 25px;
             text-align: center;
-            width: 90%;
+            width: 100%;
         }
         .Info {
             @include variables.flex(column, center, flex-start);
