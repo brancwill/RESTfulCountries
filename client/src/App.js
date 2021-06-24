@@ -11,7 +11,7 @@ class App extends Component {
 
   state = {
     countriesList: [],
-    darkMode: 'darkMode',
+    darkMode: 'lightMode',
     searchCriteria: 'https://restcountries.eu/rest/v2/all'
   }
 

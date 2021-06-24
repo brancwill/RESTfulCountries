@@ -28,18 +28,22 @@
     }
     .CountryInfo {
         @include variables.flex(column, space-around, flex-start);
-        margin-left: -15vw;
+        margin-left: 0;
         @include include-media.media('>=tablet') {
-            margin-left: -5vw;
+            margin-left: 0;
         }
         @include include-media.media('>=desktop') {
-            margin-left: -1vw;
+            margin-left: 0;
+            
         }
         h1 {
             margin-bottom: 25px;
+            text-align: center;
+            width: 90%;
         }
         .Info {
             @include variables.flex(column, center, flex-start);
+            margin-left: 5%;
             .InfoPair {
                 @include variables.flex(row, space-between, center);
                 gap: 5px;
