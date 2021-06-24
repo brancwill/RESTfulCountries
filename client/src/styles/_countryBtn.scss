@@ -1,0 +1,39 @@
+@use 'variables';
+@use '../../node_modules/include-media/dist/include-media';
+
+.CountryBtn {
+    @include variables.flex(column, center, center);
+    width: 90%;
+    max-width: 350px;
+    height: 80vw;
+    max-height: 365px;
+    border-radius: 5px;
+    margin: auto;
+    position: relative;
+    z-index: 0;
+    img {
+        overflow: hidden;
+        border-radius: 5px 5px 0 0;
+        height: 50%;
+        margin-top: -5vh;
+        margin-bottom: 10px;
+    }
+    .CountryInfo {
+        @include variables.flex(column, space-around, flex-start);
+        margin-left: -15vw;
+        h1 {
+            margin-bottom: 25px;
+        }
+        .Info {
+            @include variables.flex(column, center, flex-start);
+            .InfoPair {
+                @include variables.flex(row, space-between, center);
+                gap: 5px;
+                margin-top: -25px;
+                p {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

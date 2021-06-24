@@ -1,0 +1,78 @@
+@use 'variables';
+@use '../../node_modules/include-media/dist/include-media';
+
+.Content {
+    width: 100%;
+    .Main {
+        @include variables.flex(column, space-evenly, center);
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 0;
+        .Filters {
+            width: 90%;
+            margin: auto;
+            @include variables.flex(column, space-around, flex-start);
+        }
+        .hidden {
+            display: none;
+        }
+        .unhidden {
+            @include variables.flex(column, center, flex-start);
+            position: absolute;
+            z-index: 2;
+            height: 100px;
+            padding: 40px 0;
+            width: 40vw;
+            top: 210px;
+            left: 5%;
+            border-radius: 5px;
+            font: 400 12px "Nunito Sans";
+            ul {
+                @include variables.flex(column, space-around, flex-start);
+                margin-left: -15px;
+                gap: 7px;
+                li {
+                    list-style: none;
+                }
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+        input {
+            border: none;
+            box-sizing: border-box;
+            border-radius: 5px;
+            width: 100%;
+            margin: 50px auto;
+            height: 48px;
+            padding-left: 20%;
+        }
+        .SearchIcon {
+            position: absolute;
+            top: 68px;
+            left: 15%;
+        }
+        button {
+            align-self: flex-start;
+            margin-bottom: 50px;
+            border: none;
+            height: 48px;
+            width: 50%;
+            border-radius: 5px;
+            &::after {
+                content: url(../assets/img/DownArrow.svg);
+                margin-left: 20px;
+            }
+        }
+        .CountryList {
+            width: 80%;
+            margin: auto;
+            @include variables.flex(column, space-around, center);
+            gap: 40px;
+            position: relative;
+            z-index: 0;
+        }
+    }
+}

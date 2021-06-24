@@ -1,0 +1,54 @@
+@use 'variables';
+@use '../../node_modules/include-media/dist/include-media';
+@use 'main';
+@use 'topBar';
+@use 'countryBtn';
+@use 'country';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+}
+.App {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    
+}
+.lightMode {
+    @include variables.theme($light:true);
+}
+.darkMode {
+    @include variables.theme($light:false);
+}
+.lightMode2 {
+    @include variables.theme2($light:true);
+}
+.darkMode2 {
+    @include variables.theme2($light:false);
+}
+
+//FONTS
+
+h1 {
+    font: 800 18px "Nunito Sans";
+}
+h2 {
+    font: 800 14px "Nunito Sans";
+}
+h3 {
+    font: 600 14px "Nunito Sans";
+}
+h4 {
+    font: 600 12px "Nunito Sans";
+}
+h5 {
+    font: 300 14px "Nunito Sans";
+}
+p {
+    font: 400 12px "Nunito Sans";
+}

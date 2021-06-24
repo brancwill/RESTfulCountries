@@ -1,0 +1,65 @@
+@use 'variables';
+@use '../../node_modules/include-media/dist/include-media';
+
+.Country {
+    position: relative;
+    a {
+        text-decoration: none;
+    }
+    .BackArrow {
+        position: absolute;
+        top: 30px;
+        left: 13%;
+    }
+    .BackButton {
+        margin-left: 10%;
+        text-align: right;
+        padding-right: 4%;
+        box-sizing: border-box;
+    }
+    h5 {
+        text-align: center;
+        display: inline-block;
+        margin-right: 15px;
+        width: 23%;
+        height: 27px;
+        padding: 5px 5px 0;
+        border-radius: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .Flag {
+        margin: 20px auto;
+        border-radius: 5px;
+        @include variables.centerContent;
+    }
+    .BorderCountries {
+        padding-left: 10%;
+    }
+    h1, h2 {
+        margin-left: 10%;
+    }
+    h1 {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    .InfoPair {
+        @include variables.flex(row, flex-start, center);
+        gap: 2%;
+        margin-left: 10%;
+        margin-top: -20px;
+        p {
+            font-weight: 300;
+        }
+    }
+    .CountryLink {
+        margin-top: 0;
+    }
+    .PairContainer {
+        margin-bottom: 20px;
+    }
+}

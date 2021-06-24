@@ -1,0 +1,16 @@
+@use 'variables';
+@use '../../node_modules/include-media/dist/include-media';
+
+.TopBar {
+    @include variables.flex(row, space-between, center);
+    width: 100%;
+    height: 80px;
+    padding: 0 5%;
+    box-sizing: border-box;
+    margin: 0;
+    .DarkModeButton {
+        @include variables.flex(row, space-between, center);
+        text-decoration: none;
+        gap: 3px;
+    }
+}

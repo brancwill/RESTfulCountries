@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap");
+.Content {
+  width: 100%;
+}
+.Content .Main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 0;
+}
+.Content .Main .Filters {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.Content .Main .hidden {
+  display: none;
+}
+.Content .Main .unhidden {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  z-index: 2;
+  height: 100px;
+  padding: 40px 0;
+  width: 40vw;
+  top: 210px;
+  left: 5%;
+  border-radius: 5px;
+  font: 400 12px "Nunito Sans";
+}
+.Content .Main .unhidden ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: -15px;
+  gap: 7px;
+}
+.Content .Main .unhidden ul li {
+  list-style: none;
+}
+.Content .Main .unhidden a {
+  text-decoration: none;
+}
+.Content .Main input {
+  border: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 100%;
+  margin: 50px auto;
+  height: 48px;
+  padding-left: 20%;
+}
+.Content .Main .SearchIcon {
+  position: absolute;
+  top: 68px;
+  left: 15%;
+}
+.Content .Main button {
+  align-self: flex-start;
+  margin-bottom: 50px;
+  border: none;
+  height: 48px;
+  width: 50%;
+  border-radius: 5px;
+}
+.Content .Main button::after {
+  content: url(../assets/img/DownArrow.svg);
+  margin-left: 20px;
+}
+.Content .Main .CountryList {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 0;
+}
+
+.TopBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 0 5%;
+  box-sizing: border-box;
+  margin: 0;
+}
+.TopBar .DarkModeButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  gap: 3px;
+}
+
+.CountryBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 350px;
+  height: 80vw;
+  max-height: 365px;
+  border-radius: 5px;
+  margin: auto;
+  position: relative;
+  z-index: 0;
+}
+.CountryBtn img {
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  height: 50%;
+  margin-top: -5vh;
+  margin-bottom: 10px;
+}
+.CountryBtn .CountryInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: -15vw;
+}
+.CountryBtn .CountryInfo h1 {
+  margin-bottom: 25px;
+}
+.CountryBtn .CountryInfo .Info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.CountryBtn .CountryInfo .Info .InfoPair {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin-top: -25px;
+}
+.CountryBtn .CountryInfo .Info .InfoPair p {
+  font-weight: 300;
+}
+
+.Country {
+  position: relative;
+}
+.Country a {
+  text-decoration: none;
+}
+.Country .BackArrow {
+  position: absolute;
+  top: 30px;
+  left: 13%;
+}
+.Country .BackButton {
+  margin-left: 10%;
+  text-align: right;
+  padding-right: 4%;
+  box-sizing: border-box;
+}
+.Country h5 {
+  text-align: center;
+  display: inline-block;
+  margin-right: 15px;
+  width: 23%;
+  height: 27px;
+  padding: 5px 5px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.Country .Flag {
+  margin: 20px auto;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Country .BorderCountries {
+  padding-left: 10%;
+}
+.Country h1, .Country h2 {
+  margin-left: 10%;
+}
+.Country h1 {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.Country h2 {
+  margin-bottom: 20px;
+}
+.Country .InfoPair {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2%;
+  margin-left: 10%;
+  margin-top: -20px;
+}
+.Country .InfoPair p {
+  font-weight: 300;
+}
+.Country .CountryLink {
+  margin-top: 0;
+}
+.Country .PairContainer {
+  margin-bottom: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.lightMode {
+  background-color: #FFFFFF;
+  color: #111517;
+}
+.lightMode::placeholder {
+  color: #C2C2C2;
+}
+.lightMode::after {
+  filter: brightness(0);
+}
+.lightMode a {
+  color: #111517;
+}
+
+.darkMode {
+  background-color: #2B3844;
+  color: white;
+}
+.darkMode::placeholder {
+  color: white;
+}
+.darkMode a {
+  color: white;
+}
+
+.lightMode2 {
+  background-color: #FAFAFA;
+  color: #111517;
+}
+
+.darkMode2 {
+  background-color: #202C36;
+  color: white;
+}
+
+h1 {
+  font: 800 18px "Nunito Sans";
+}
+
+h2 {
+  font: 800 14px "Nunito Sans";
+}
+
+h3 {
+  font: 600 14px "Nunito Sans";
+}
+
+h4 {
+  font: 600 12px "Nunito Sans";
+}
+
+h5 {
+  font: 300 14px "Nunito Sans";
+}
+
+p {
+  font: 400 12px "Nunito Sans";
+}
+
+/*# sourceMappingURL=styles.css.map */

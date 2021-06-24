@@ -1,0 +1,50 @@
+$light1: #FFFFFF;
+$light2: #FAFAFA;
+$dark1: #2B3844;
+$dark2: #202C36;
+$black: #111517;
+
+@mixin theme($light:true) {
+    @if $light {
+        background-color: $light1;
+        color: $black;
+        &::placeholder {
+            color: #C2C2C2;
+        }
+        &::after {
+            filter: brightness(0);
+        }
+        a {
+            color: $black;
+        }
+    } @else {
+        background-color: $dark1;
+        color: white;
+        &::placeholder {
+            color: white;
+        }
+        a {
+            color: white;
+        }
+    }
+}
+@mixin theme2($light:true) {
+    @if $light {
+        background-color: $light2;
+        color: $black;
+    } @else {
+        background-color: $dark2;
+        color: white;
+    }
+}
+@mixin flex($direction, $justification, $alignment) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justification;
+    align-items: $alignment;
+}
+@mixin centerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
