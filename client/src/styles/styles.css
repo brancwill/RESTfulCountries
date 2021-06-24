@@ -144,10 +144,11 @@
     box-sizing: border-box;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
-    row-gap: 100px;
+    row-gap: 70px;
     align-items: center;
     justify-items: center;
     padding: 0 5%;
+    margin-top: 40px;
   }
 }
 
