@@ -357,7 +357,7 @@
     position: relative;
     width: 50vw;
     left: 19.5%;
-    top: -120px;
+    top: -80px;
   }
   .Country .BorderCountries h5 {
     width: 8vw;
@@ -400,6 +400,7 @@
 }
 .Country .InfoPair p {
   font-weight: 300;
+  white-space: nowrap;
 }
 .Country .CountryLink {
   margin-top: 0;
