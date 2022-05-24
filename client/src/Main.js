@@ -41,14 +41,14 @@ const Main = (props) => {
                 {props.countriesList.filter((val) => {
                     if (searchTerm == '') {
                         return val
-                    } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                    } else if (val.name.common.toLowerCase().includes(searchTerm.toLowerCase())) {
                         return val
                     }
                 }).map((country, index) => (
                     <CountryBtn 
                     key={index}
-                    name={country.name}
-                    img={country.flag} 
+                    name={country.name.common}
+                    img={country.flags.png} 
                     population={country.population}
                     capital={country.capital}
                     region={country.region}

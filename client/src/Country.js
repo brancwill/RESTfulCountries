@@ -6,9 +6,8 @@ import DarkArrow from './assets/img/DarkArrow.svg'
 
 const Country = (props) => {
 
-    const countryLinks = props.countriesList.filter(country => props.borderingCountries.includes(country.alpha3Code))
-    const languages = props.languages.map(language => language.name)
-    const currencies = props.currencies.map(currency => currency.name)
+    const languages = Object.values(props.languages)
+    const currencies = Object.values(Object.keys(props.currencies)) 
 
     
     return (
@@ -19,10 +18,6 @@ const Country = (props) => {
             <img className="Flag" src={props.img} alt={props.name + " Flag"} width="80%"/>
             <h1>{props.name}</h1>
             <div className="PairContainer">
-                <div className="InfoPair">
-                    <h3>Native Name:</h3>
-                    <p>{props.nativeName}</p>
-                </div>
                 <div className="InfoPair">
                     <h3>Population:</h3>
                     <p>{props.population}</p>
@@ -37,7 +32,7 @@ const Country = (props) => {
                 </div>
                 <div className="InfoPair">
                     <h3>Capital:</h3>
-                    <p>{props.capital}</p>
+                    <p>{props.capital || "N/A"}</p>
                 </div>
             </div>
             <div className="PairContainer">
@@ -53,12 +48,6 @@ const Country = (props) => {
                     <h3>Languages:</h3>
                     <p>{languages.join(', ')}</p>
                 </div>
-            </div>
-            <h2>Border Countries:</h2>
-            <div className="BorderCountries">
-                {countryLinks.map(country => (
-                    <Link to={`/countries/${country.name}`}><h5 className={"CountryLink" + ' ' + props.darkMode}>{country.name}</h5></Link>
-                ))}
             </div>
             </div>
             <div className="NoDisplayMobile">
@@ -103,16 +92,6 @@ const Country = (props) => {
                     <p>{languages.join(', ')}</p>
                 </div>
             </div>
-            </div>
-            </div>
-            <div className="NoDisplayMobile">
-            <div className="BorderCountries">
-                <h2>Border Countries:</h2>
-                <div className="Neighbors">
-                    {countryLinks.map(country => (
-                        <Link to={`/countries/${country.name}`}><h5 className={"CountryLink" + ' ' + props.darkMode}>{country.name}</h5></Link>
-                    ))}
-                </div>
             </div>
             </div>
         </div>

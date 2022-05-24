@@ -12,7 +12,7 @@ class App extends Component {
   state = {
     countriesList: [],
     darkMode: 'lightMode',
-    searchCriteria: 'https://restcountries.eu/rest/v2/all'
+    searchCriteria: 'https://restcountries.com/v3.1/all'
   }
 
 
@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   setRegion = (region) => {
-    this.setState({searchCriteria: `https://restcountries.eu/rest/v2/${region}`}, () => {
+    this.setState({searchCriteria: `https://restcountries.com/v3.1/${region}`}, () => {
       this.getCountries()
     })
   }
@@ -57,17 +57,16 @@ class App extends Component {
                 <Main search={this.search} setRegion={this.setRegion} darkMode={this.state.darkMode} countriesList={this.state.countriesList}/>
               </Route>
               {this.state.countriesList.map((country) => (
-                <Route path={`/countries/${country.name}`} render={(props) => 
+                <Route path={`/countries/${country.name.common}`} render={(props) => 
                   <Country {...props} 
                   darkMode={this.state.darkMode}
-                  name={country.name}
-                  img={country.flag}
-                  nativeName={country.nativeName}
+                  name={country.name.common}
+                  img={country.flags.png}
                   population={country.population}
                   region={country.region}
                   subRegion={country.subregion}
                   capital={country.capital}
-                  domain={country.topLevelDomain}
+                  domain={country.tld}
                   currencies={country.currencies}
                   languages={country.languages}
                   borderingCountries={country.borders}

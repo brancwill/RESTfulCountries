@@ -18,7 +18,7 @@ const CountryBtn = (props) => {
                     </div>
                     <div className="InfoPair">
                         <h3>Capital:</h3>
-                        <p>{props.capital}</p>
+                        <p>{props.capital || "N/A"}</p>
                     </div>
                 </div>
             </div>
